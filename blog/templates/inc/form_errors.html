@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="alerts">
+      {% if form.username and form.username.errors %}
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+          <i class="fas fa-exclamation-circle"></i>
+          <strong>نام کاربری نامعتبر است</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+      {% endif %}
+  
+      {% if form.email and form.email.errors %}
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+          <i class="fas fa-exclamation-circle"></i>
+          <strong>آدرس ایمیل نامعتبر است</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+      {% endif %}
+  
+      {% if form.password and form.password.errors %}
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+          <i class="fas fa-exclamation-circle"></i>
+          <strong>رمز عبور نامعتبر است</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+      {% endif %}
+  
+      {% if form.confirm_password and form.confirm_password.errors %}
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+          <i class="fas fa-exclamation-circle"></i>
+          <strong>رمز عبور‌ها با هم مطابقت ندارند</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+  

@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="post-details">
+
+    {% if post.author == current_user %}
+        <div class="post-actions">
+            <a href="{{ url_for('delete', post_id=post.id) }}" class="btn btn-danger">حذف</a>
+            <a href="{{ url_for('update', post_id=post.id) }}" class="btn btn-secondary">ویرایش</a>
+        </div>
+    {% endif %}
+
+    <div class="post-header" dir="rtl">
+        <h3>{{ post.title }}</h3>
+        <p class="post-meta">
+            <small>{{ post.author.username }} | {{ post.date.strftime('%Y-%m-%d') }}</small>
+        </p>
+    </div>
+    <hr/>
+    
+    <div class="post-content">
+        {{ post.content.replace('\n', '<br>') | safe }}
+      </div>
+
+    <div class="share-buttons">
+        <a href="https://t.me/share/url?url={{ url_for('detail', post_id=post.id, _external=True) }}" target="_blank" class="btn btn-info"><i class="fab fa-telegram"></i>اشتراک گذاری در تلگرام</a>
+        <a href="https://twitter.com/intent/tweet?url={{ url_for('detail', post_id=post.id, _external=True) }}&text={{ post.title }}" target="_blank" class="btn btn-info"><i class="fab fa-twitter"></i>اشتراک گذاری در توییتر</a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u={{ url_for('detail', post_id=post.id, _external=True) }}" target="_blank" class="btn btn-info"><i class="fab fa-facebook"></i>اشتراک گذاری در فیسبوک</a>
+        <a href="https://www.linkedin.com/shareArticle?url={{ url_for('detail', post_id=post.id, _external=True) }}&title={{ post.title }}" target="_blank" class="btn btn-info"><i class="fab fa-linkedin"></i>اشتراک گذاری در لینکداین</a>
+        <a href="https://wa.me/?text={{ url_for('detail', post_id=post.id, _external=True) }}" target="_blank" class="btn btn-info"><i class="fab fa-whatsapp"></i> اشتراک گذاری در واتساپ</a>
+    </div>
+
+</div>
+
+{% endblock %}

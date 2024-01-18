@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% include 'inc/form_errors.html' %}
+    <form action="" method="post">
+        {{ form.csrf_token }}
+        
+        <div class="form-group">
+            {{ form.email.label(class='form-control-label', text='ایمیل') }}
+            {{ form.email(class='form-control', placeholder='آدرس ایمیل را وارد کنید') }}
+        </div>
+
+        <div class="form-group">
+            {{ form.password.label(class='form-control-label', text='رمز عبور') }}
+            {{ form.password(class='form-control', placeholder='رمز عبور خود را وارد کنید') }}
+        </div>
+
+        <div class="form-group form-check">
+            {{ form.remember(class='form-check-input') }}
+            {{ form.remember.label(class='form-check-label mr-2 text-left', text='مرا به خاطر بسپار') }}
+        </div>
+
+        <input type="submit" value="ورود" class="btn btn-info">
+    </form>
+
+
+{% endblock %}

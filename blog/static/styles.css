@@ -1,0 +1,111 @@
+
+/* detail.html */
+body {
+    font-family: 'B Titr', Arial, sans-serif;
+    background-image: url('/static/images/aser.jpg'); /* مسیر تصویر بک‌گراند */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* تصویر ثابت در پس زمینه */
+    background-color: #f8f9fa; /* رنگ پس‌زمینه در صورتی که تصویر بخواهد لود نشد */
+    color: #333; /* رنگ متن */
+}
+.post-details {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post-actions {
+    margin-bottom: 15px;
+}
+
+.post-actions a {
+    margin-right: 10px;
+}
+
+.post-header h3 {
+    color: #333;
+    font-size: 1.5em; /* اندازه فونت افزایش یافته */
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.post-meta {
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.post-content p {
+    line-height: 1.6;
+    font-size: 1.2em; /* اندازه فونت افزایش یافته */
+}
+
+.share-buttons {
+    margin-top: 20px;
+}
+
+.share-buttons a {
+    margin-right: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em; /* اندازه فونت افزایش یافته */
+}
+
+.share-buttons a:hover {
+    opacity: 0.8;
+}
+
+
+
+/* home.html */
+  .home {
+    font-family: 'B Titr', Tahoma, sans-serif; /* یک فونت مناسب انتخاب کنید */
+  }
+
+  .home h3 {
+  color: #c2bdbd; /* رنگ متن عنوان */
+  text-align: center;
+  padding: 20px;
+  background-color: #333; /* رنگ پس زمینه عنوان */
+  margin: 0; /* حذف حاشیه بالا و پایین عنوان */
+  font-family: 'B Titr', 'B Nazanin', Tahoma, Geneva, Verdana, sans-serif; /* اضافه کردن فونت فارسی */
+  opacity: 0.8; /* افزودن محو به عنوان اپسیتی */
+  transition: opacity 0.5s ease; /* افزودن انیمیشن به تغییر محو */
+}
+
+
+.home .card {
+  margin: 20px;
+  padding: 15px; /* افزایش پدینگ برای زیبایی بیشتر */
+  background-color: #f8f9fa; /* تغییر به رنگ پس زمینه جدید */
+  border: 1px solid #ced4da; /* افزودن حاشیه با رنگ هماهنگ */
+  border-radius: 15px; /* افزایش شعاع گوشه‌ها */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* افزودن سایه */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease; /* افزودن انیمیشن به تغییرات */
+  opacity: 0.8; /* افزودن محو به عنوان اپسیتی */
+}
+
+.home .card:hover {
+  transform: scale(1.05); /* تغییر اندازه در حالت هاور */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* افزایش سایه در حالت هاور */
+  opacity: 1; /* حالت هاور بازکردن محو */
+}
+
+ .home .card-body {
+    text-decoration: none;
+    color: #333; /* رنگ متن لینک‌ها */
+    display: block;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc; /* رنگ حاشیه لینک‌ها */
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* انیمیشن تغییر رنگ پس زمینه لینک‌ها */
+  }
+
+ .home .card-body:hover {
+    background-color: #f0f0f0; 
+}
+

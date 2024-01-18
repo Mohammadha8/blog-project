@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% include 'inc/form_errors.html' %}
+    <form action="" method="post" class="mx-auto col-md-6">
+        {{ form.csrf_token }}
+
+        <div class="form-group">
+            {{ form.username.label(class='form-control-label', text='نام کاربری') }}
+            {{ form.username(class='form-control', placeholder='نام کاربری خود را وارد کنید') }}
+        </div>
+
+        <div class="form-group">
+            {{ form.email.label(class='form-control-label', text='ایمیل') }}
+            {{ form.email(class='form-control', placeholder='ایمیل خود را وارد کنید') }}
+        </div>
+
+        <div class="form-group">
+            {{ form.password.label(class='form-control-label', text='رمز عبور') }}
+            {{ form.password(class='form-control', placeholder='رمز عبور خود را وارد کنید') }}
+        </div>
+
+        <div class="form-group">
+            {{ form.confirm_password.label(class='form-control-label', text='تکرار رمز عبور') }}
+            {{ form.confirm_password(class='form-control', placeholder='تکرار رمز عبور خود را وارد کنید') }}
+        </div>
+
+        <div class="text-center">
+            <input type="submit" value="ثبت نام" class="btn btn-info">
+        </div>
+    </form>
+{% endblock %}
